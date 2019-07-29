@@ -851,7 +851,7 @@
 
   function onKeyDown(evt) {
   
-  
+  alert("Hello! I am an alert box!!"+evt.keyCode);
     if (!_sectionCount || _pause ||
         evt.altKey || evt.ctrlKey || evt.metaKey || evt.shiftKey) {
       return;
