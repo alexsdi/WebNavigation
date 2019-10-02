@@ -864,6 +864,7 @@
       return false;
     };
 
+    alert('keycode:'+evt.keyCode);
     var direction = KEYMAPPING[evt.keyCode];
     if (!direction) {
       if (evt.keyCode == 13 || evt.keyCode == 195) {
