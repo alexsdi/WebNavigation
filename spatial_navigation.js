@@ -871,7 +871,7 @@
         currentFocusedElement = getCurrentFocusedElement();
         if (currentFocusedElement && getSectionId(currentFocusedElement)) {
           //alert('{keycode: "'+evt.keyCode+'"} ');
-          if (!fireEvent(currentFocusedElement, 'click')) {
+          if (!fireEvent(currentFocusedElement, 'enter-down')) {
             return preventDefault();
           }
         }
