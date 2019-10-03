@@ -890,7 +890,7 @@
         currentFocusedElement = getCurrentFocusedElement();
         if (currentFocusedElement && getSectionId(currentFocusedElement)) {
           //alert('{keycode: "'+evt.keyCode+'"} ');
-          if (!fireEvent(currentFocusedElement, 'keypress')) {
+          if (!fireKeyPressEvent(currentFocusedElement, 'keypress')) {
             return preventDefault();
           }
         }
