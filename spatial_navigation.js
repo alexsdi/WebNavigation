@@ -601,13 +601,15 @@
     var evt = document.createEvent('CustomEvent');
     evt.initCustomEvent(EVENT_PREFIX + type, true, cancelable, details);
    
-    
+    alert('elemt'+elem)
    var  evt1 = document.createEventObject('KeyboardEvent');
   evt1.keyCode = 13;
      evt1.custom = true;
     elem.fireEvent('onkeyup', evt1);
     elem.fireEvent('onkeydown', evt1);
     elem.click()
+    elem.keydown(evt1)
+        elem.keypress(evt1)
     
      return elem.dispatchEvent(evt);
   }
