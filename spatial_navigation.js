@@ -594,6 +594,23 @@
     evt.initCustomEvent(EVENT_PREFIX + type, true, cancelable, details);
     return elem.dispatchEvent(evt);
   }
+  function fireKeyPressEvent(elem, type, details, cancelable) {
+    if (arguments.length < 4) {
+      cancelable = true;
+    }
+    var evt = document.createEvent('CustomEvent');
+    evt.initCustomEvent(EVENT_PREFIX + type, true, cancelable, details);
+   
+    
+   var  evt1 = document.createEventObject('KeyboardEvent');
+  evt1.keyCode = 13;
+     evt1.custom = true;
+    elem.fireEvent('onkeyup', evt1);
+    elem.fireEvent('onkeydown', evt1);
+    elem.click()
+    
+     return elem.dispatchEvent(evt);
+  }
 
   function focusElement(elem, sectionId, direction) {
     if (!elem) {
@@ -871,7 +888,7 @@
         currentFocusedElement = getCurrentFocusedElement();
         if (currentFocusedElement && getSectionId(currentFocusedElement)) {
           //alert('{keycode: "'+evt.keyCode+'"} ');
-          if (!fireEvent(currentFocusedElement, 'enter-down')) {
+          if (!fireEvent(currentFocusedElement, 'keypress')) {
             return preventDefault();
           }
         }
