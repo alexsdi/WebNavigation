@@ -870,7 +870,7 @@
       if (evt.keyCode == 13 || evt.keyCode == 195) {
         currentFocusedElement = getCurrentFocusedElement();
         if (currentFocusedElement && getSectionId(currentFocusedElement)) {
-          alert('{keycode: "'+evt.keyCode+'"} ');
+          //alert('{keycode: "'+evt.keyCode+'"} ');
           if (!fireEvent(currentFocusedElement, 'click')) {
             return preventDefault();
           }
