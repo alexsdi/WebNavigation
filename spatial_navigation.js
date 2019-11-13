@@ -918,7 +918,18 @@
     var currentSectionId = getSectionId(currentFocusedElement);
     console.log("github currentSectionId= ",currentSectionId)
     if (!currentSectionId) {
+
+        if (_lastSectionId) {
+        currentFocusedElement = getSectionLastFocusedElement(_lastSectionId);
+      }
+      if (!currentFocusedElement) {
+        focusSection();
+        return preventDefault();
+      }
+      currentSectionId = getSectionId(currentFocusedElement);
+ if (!currentSectionId) {
       return;
+    }
     }
  
     
