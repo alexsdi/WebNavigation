@@ -903,6 +903,8 @@
 
     currentFocusedElement = getCurrentFocusedElement();
 
+    console.log("github currentFocusedElement= ",currentFocusedElement)
+    
     if (!currentFocusedElement) {
       if (_lastSectionId) {
         currentFocusedElement = getSectionLastFocusedElement(_lastSectionId);
