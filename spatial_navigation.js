@@ -870,11 +870,14 @@
 
   function onKeyDown(evt) {
   
- 
+ console.log("githu1",evt)
+    
     if (!_sectionCount || _pause ||
         evt.altKey || evt.ctrlKey || evt.metaKey || evt.shiftKey) {
       return;
     }
+    
+    console.log("githu",evt)
     
     var currentFocusedElement;
     var preventDefault = function() {
