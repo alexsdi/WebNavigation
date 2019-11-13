@@ -875,7 +875,8 @@
         evt.altKey || evt.ctrlKey || evt.metaKey || evt.shiftKey) {
       return;
     }
-
+console.log("gitup = "evt);
+    
     var currentFocusedElement;
     var preventDefault = function() {
       evt.preventDefault();
