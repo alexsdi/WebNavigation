@@ -916,10 +916,13 @@
     }
 
     var currentSectionId = getSectionId(currentFocusedElement);
+    console.log("github currentSectionId= ",currentSectionId)
     if (!currentSectionId) {
       return;
     }
-
+ 
+    
+    
     var willmoveProperties = {
       direction: direction,
       sectionId: currentSectionId,
@@ -927,6 +930,7 @@
     };
 
     if (fireEvent(currentFocusedElement, 'willmove', willmoveProperties)) {
+      console.log("github inside fire event= ",willmoveProperties)
       focusNext(direction, currentFocusedElement, currentSectionId);
     }
 
