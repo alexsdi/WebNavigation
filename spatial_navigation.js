@@ -870,7 +870,7 @@
 
   function onKeyDown(evt) {
   
- console.log("githu1",evt)
+ 
     
     if (!_sectionCount || _pause ||
         evt.altKey || evt.ctrlKey || evt.metaKey || evt.shiftKey) {
@@ -887,9 +887,11 @@
     };
 
    // alert('{keycode: "'+evt.keyCode+'"} ');
+    var keycode = evt.keyCode;
+    if(evt.keyval) keycode = evt.keyval;
     var direction = KEYMAPPING[evt.keyCode];
     if (!direction) {
-      if (evt.keyCode == 13 || evt.keyCode == 195) {
+      if (keycode == 13 || keycode == 195) {
         currentFocusedElement = getCurrentFocusedElement();
         if (currentFocusedElement && getSectionId(currentFocusedElement)) {
           //alert('{keycode: "'+evt.keyCode+'"} ');
