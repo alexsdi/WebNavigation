@@ -887,11 +887,11 @@
     };
 
    // alert('{keycode: "'+evt.keyCode+'"} ');
-    var keycode = evt.keyCode;
-    if(evt.keyval) keycode = evt.keyval;
-    var direction = KEYMAPPING[evt.keyCode];
+    var newKeyCode = evt.keyCode;
+    if(evt.keyval) newKeyCode = evt.keyval;
+    var direction = KEYMAPPING[newKeyCode];
     if (!direction) {
-      if (keycode == 13 || keycode == 195) {
+      if (newKeyCode == 13 || newKeyCode == 195) {
         currentFocusedElement = getCurrentFocusedElement();
         if (currentFocusedElement && getSectionId(currentFocusedElement)) {
           //alert('{keycode: "'+evt.keyCode+'"} ');
