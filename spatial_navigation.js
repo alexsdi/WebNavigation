@@ -877,7 +877,7 @@
       return;
     }
     
-    console.log("githu",evt)
+    
     
     var currentFocusedElement;
     var preventDefault = function() {
@@ -905,7 +905,7 @@
 
     currentFocusedElement = getCurrentFocusedElement();
 
-    console.log("github currentFocusedElement= ",currentFocusedElement)
+    
     
     if (!currentFocusedElement) {
       if (_lastSectionId) {
@@ -918,7 +918,7 @@
     }
 
     var currentSectionId = getSectionId(currentFocusedElement);
-    console.log("github currentSectionId= ",currentSectionId)
+    
     if (!currentSectionId) {
 
         if (_lastSectionId) {
@@ -943,7 +943,7 @@
     };
 
     if (fireEvent(currentFocusedElement, 'willmove', willmoveProperties)) {
-      console.log("github inside fire event= ",willmoveProperties)
+      
       focusNext(direction, currentFocusedElement, currentSectionId);
     }
 
